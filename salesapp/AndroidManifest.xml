@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="phase3.cscb07.salesapplication">
+
+    <uses-feature android:name="android.hardware.type.android" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UserView" />
+        <activity android:name=".AdminView" />
+        <activity android:name=".InitializationView" />
+        <activity android:name=".OrderComfirmationView" />
+        <activity android:name=".ShoppingCartView" />
+        <activity android:name=".CheckoutGuestView" />
+        <activity android:name=".CustomerInfoConfirmationView" />
+        <activity android:name=".AccountView" />
+        <activity android:name=".AdminWelcomeView" />
+        <activity android:name=".HireUserView" />
+        <activity android:name=".RestockInventoryView" />
+        <activity android:name=".CreateCustomerView" />
+        <activity android:name=".PurchaseForCustomerView" />
+        <activity android:name=".EditAccountView" />
+        <activity android:name=".ViewBooksView" />
+        <activity android:name=".DisplayActiveAccountsView" />
+        <activity android:name="com.b07.userinterface.AdminInterface" />
+        <activity android:name=".DisplayAccountEnterIdView" />
+        <activity android:name=".DisplayInactiveAccountsView" />
+    </application>
+
+</manifest>
