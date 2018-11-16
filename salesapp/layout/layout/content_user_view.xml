@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="phase3.cscb07.salesapplication.UserView"
+    tools:showIn="@layout/activity_user_view">
+
+    <RelativeLayout
+        android:id="@+id/user_view_header"
+        android:layout_width="383dp"
+        android:layout_height="98dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:onClick="logout"
+            android:text="@string/logout_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/shopping_cart_button"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_alignTop="@+id/logout_button"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:onClick="toShoppingCart"
+            android:text="@string/shopping_cart_text" />
+
+        <Button
+            android:id="@+id/my_account_button"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/my_account_text"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="379dp"
+        android:layout_height="411dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:background="@color/silver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_view_header"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/FISHING_ROD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/fishing_rod" />
+
+                <Button
+                    android:id="@+id/item1_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/quantity_input_prompt1"
+                    android:text="@string/add_to_cart"
+                    tools:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/quantity_input_prompt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/stockView1"
+                    android:text="@string/quantity" />
+
+                <EditText
+                    android:id="@+id/quantity_input1"
+                    android:layout_width="67dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/item1_Button"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/priceView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/stockView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/quantity_input1"
+                    android:text="@string/stock" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/HOCKEY_STICK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/hockey_stick" />
+
+                <Button
+                    android:id="@+id/item2_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/quantity_input_prompt2"
+                    android:text="@string/add_to_cart"
+                    tools:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/quantity_input_prompt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/stockView2"
+                    android:text="@string/quantity" />
+
+                <EditText
+                    android:id="@+id/quantity_input2"
+                    android:layout_width="67dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="21dp"
+                    android:layout_toStartOf="@+id/item2_Button"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/priceView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/stockView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/quantity_input2"
+                    android:text="@string/stock" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/SKATES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/skates" />
+
+                <Button
+                    android:id="@+id/item3_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/quantity_input_prompt3"
+                    android:text="@string/add_to_cart"
+                    tools:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/quantity_input_prompt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/stockView3"
+                    android:text="@string/quantity" />
+
+                <EditText
+                    android:id="@+id/quantity_input3"
+                    android:layout_width="67dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="21dp"
+                    android:layout_toStartOf="@+id/item3_Button"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/priceView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/stockView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/quantity_input3"
+                    android:text="@string/stock" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/RUNNING_SHOES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/running_shoes" />
+
+                <Button
+                    android:id="@+id/item4_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/quantity_input_prompt4"
+                    android:text="@string/add_to_cart"
+                    tools:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/quantity_input_prompt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/stockView4"
+                    android:text="@string/quantity" />
+
+                <EditText
+                    android:id="@+id/quantity_input4"
+                    android:layout_width="67dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="24dp"
+                    android:layout_toStartOf="@+id/item4_Button"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/priceView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/stockView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/quantity_input4"
+                    android:text="@string/stock" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/PROTEIN_BAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/protein_bar" />
+
+                <Button
+                    android:id="@+id/item5_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/quantity_input_prompt5"
+                    android:text="@string/add_to_cart"
+                    tools:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/quantity_input_prompt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/stockView5"
+                    android:text="@string/quantity" />
+
+                <EditText
+                    android:id="@+id/quantity_input5"
+                    android:layout_width="67dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="27dp"
+                    android:layout_toStartOf="@+id/item5_Button"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/priceView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/stockView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/quantity_input5"
+                    android:text="@string/stock" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

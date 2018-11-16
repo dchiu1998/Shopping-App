@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="phase3.cscb07.salesapplication.AdminWelcomeView"
+    tools:showIn="@layout/activity_admin_welcome_view">
+
+    <TextView
+        android:id="@+id/admin_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="79dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="36dp"
+        android:text="New administrator has been created"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="82dp"
+        android:text="Your user id is :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_title_text" />
+
+    <TextView
+        android:id="@+id/user_id_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="82dp"
+        android:text="user_id"
+        app:layout_constraintStart_toEndOf="@+id/user_id_title"
+        app:layout_constraintTop_toBottomOf="@+id/admin_title_text" />
+
+    <Button
+        android:id="@+id/to_admin_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="83dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="103dp"
+        android:text="Go to administrator view"
+        android:onClick="toAdminView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_id_title" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="53dp"
+        android:onClick = "logout"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_admin_view_button" />
+</android.support.constraint.ConstraintLayout>

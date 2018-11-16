@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="phase3.cscb07.salesapplication.ShoppingCartView"
+    tools:showIn="@layout/activity_shopping_cart_view">
+
+    <RelativeLayout
+        android:id="@+id/shopping_cart_view_header"
+        android:layout_width="383dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="backToStore"
+            android:text="@string/back_to_store"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="321dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopping_cart_view_header"
+        android:background="@color/silver">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="368dp"
+        android:layout_height="112dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/update_quantity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Update Quantity" />
+
+        <Button
+            android:id="@+id/checkout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/update_quantity_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:onClick="toGuestCheckout"
+            android:text="Checkout" />
+
+        <TextView
+            android:id="@+id/subtotal_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/update_quantity_button"
+            android:layout_alignBottom="@+id/update_quantity_button"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@+id/update_quantity_button"
+            android:text="Subtotal :" />
+
+        <TextView
+            android:id="@+id/tax_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtotal_title_text"
+            android:layout_toStartOf="@+id/subtotal_text"
+            android:text="Tax :" />
+
+        <TextView
+            android:id="@+id/total_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tax_title_text"
+            android:layout_toStartOf="@+id/total_text"
+            android:text="Total :" />
+
+        <TextView
+            android:id="@+id/subtotal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tax_title_text"
+            android:layout_toEndOf="@+id/subtotal_title_text"
+            android:text="subtotal"/>
+
+        <TextView
+            android:id="@+id/tax_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tax_title_text"
+            android:layout_alignBottom="@+id/tax_title_text"
+            android:layout_toEndOf="@+id/subtotal_title_text"
+            android:text="tax rate" />
+
+        <TextView
+            android:id="@+id/total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/total_title_text"
+            android:layout_alignBottom="@+id/total_title_text"
+            android:layout_toEndOf="@+id/tax_title_text"
+            android:text="total"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

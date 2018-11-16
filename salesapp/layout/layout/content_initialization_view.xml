@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="phase3.cscb07.salesapplication.InitializationView"
+    tools:showIn="@layout/activity_initialization_view">
+
+    <TextView
+        android:id="@+id/initalization_page_title"
+        android:layout_width="164dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="122dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/initial_admin_setup_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/user_information_input_prompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_information_input_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginStart="52dp"
+        android:text="@string/please_enter_the_following_text"
+        app:layout_constraintBottom_toTopOf="@+id/name_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/initalization_page_title"
+        android:layout_below="@+id/initalization_page_title"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginStart="51dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/name_text"
+        app:layout_constraintBottom_toTopOf="@+id/age_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/age_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/name_input"
+        android:layout_below="@+id/name_input"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginStart="51dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/age_text"
+        app:layout_constraintBottom_toTopOf="@+id/address_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/address_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/age_input"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginStart="51dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:hint="@string/address_text"
+        app:layout_constraintBottom_toTopOf="@+id/password_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/address_input"
+        android:layout_below="@+id/address_input"
+        android:layout_marginEnd="118dp"
+        android:layout_marginStart="51dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/password_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_input"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <Button
+        android:labelFor="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="38dp"
+        android:text="@string/next_text"
+        android:onClick = "toAdminWelcomeView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+</android.support.constraint.ConstraintLayout>
